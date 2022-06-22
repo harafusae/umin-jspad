@@ -1,0 +1,130 @@
+@charset "UTF-8";
+
+/*--------------------------------------------------------------- 
+			グローバルナビゲーション
+--------------------------------------------------------------- */
+
+#nav ul {
+	overflow: hidden; /* 回り込み(float)の解除 + 内部要素の高さを自動補正 */
+	zoom: 1; /* for IE6 */
+}
+#nav ul li {
+	margin: 0px !important;
+	padding: 0px !important;
+	float: left;
+}
+#nav a {
+	display: block;
+	text-indent: -999999px;
+	outline:none;
+	height: 48px;
+}
+#nav li a:hover {
+	background-position:	0px -48px;
+}
+/*----カレント状態----*/
+ul#nav-home #home a,
+ul#nav-aisatu #aisatu a,
+ul#nav-kenkyukai #kenkyukai a,
+ul#nav-info #info a,
+ul#nav-news #news a {
+	background-position:	0 -48px;
+}
+
+#home a{
+	background-image: url(../img/nav_top.jpg);
+	background-repeat: no-repeat;
+	width: 205px;
+}
+
+#aisatu a{
+	background-image: url(../img/nav_aisatu.jpg);
+	background-repeat: no-repeat;
+	width: 195px;
+}
+
+#kenkyukai a{
+	background-image: url(../img/nav_kenkyukai.jpg);
+	background-repeat: no-repeat;
+	width: 229px;
+}
+
+#info a{
+	background-image: url(../img/nav_info.jpg);
+	background-repeat: no-repeat;
+	width: 207px;
+}
+
+#news a{
+	background-image: url(../img/nav_sonota.jpg);
+	background-repeat: no-repeat;
+	width: 166px;
+}
+
+
+
+/*--------------------------------------------------------------- 
+			サブナビゲーション
+--------------------------------------------------------------- */
+
+#pageNav ul {
+	overflow: hidden; /* 回り込み(float)の解除 + 内部要素の高さを自動補正 */
+	zoom: 1; /* for IE6 */
+	background-color: #8DD8F8;
+	padding-top: 1px;
+}
+#pageNav ul li {
+	width: 188px;
+	margin: 0px auto !important;
+	padding: 0px !important;
+}
+#pageNav li a {
+	display: block;
+	text-indent: -999999px;
+	outline:none;
+	width: 188px;
+	height: 43px;
+	margin-bottom: 1px;
+}
+#pageNav ul li a:hover {
+	background-position:	-188px 0;
+}
+/*----カレント状態----*/
+#pageNav ul#ulpN-gakujutu-1 #pN-gakujutu-1 a,
+#pageNav ul#ulpN-gakujutu-2 #pN-gakujutu-2 a,
+#pageNav ul#ulpN-about-1 #pN-about-1 a,
+#pageNav ul#ulpN-about-2 #pN-about-2 a,
+#pageNav ul#ulpN-about-3 #pN-about-3 a,
+#pageNav ul#ulpN-about-4 #pN-about-4 a{
+	background-position:	-188px 0;
+}
+
+/*----学術集会情報----*/
+#pageNav #pN-gakujutu-1 a {
+	background-image: url(../img/pn_gakujutu_1.jpg);
+	background-repeat: no-repeat;
+}
+#pageNav #pN-gakujutu-2 a {
+	background-image: url(../img/pn_gakujutu_2.jpg);
+	background-repeat: no-repeat;
+}
+
+/*----研究会について----*/
+#pageNav #pN-about-1 a {
+	background-image: url(../img/pn_about_1.jpg);
+	background-repeat: no-repeat;
+}
+#pageNav #pN-about-2 a {
+	background-image: url(../img/pn_about_2.jpg);
+	background-repeat: no-repeat;
+}
+#pageNav #pN-about-3 a {
+	background-image: url(../img/pn_about_3.jpg);
+	background-repeat: no-repeat;
+}
+#pageNav #pN-about-4 a {
+	background-image: url(../img/pn_about_4.jpg);
+	background-repeat: no-repeat;
+}
+
+

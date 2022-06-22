@@ -1,0 +1,739 @@
+@charset "UTF-8";
+
+/*---------------------------------------------------------------
+			ページ構造の指定
+--------------------------------------------------------------- */
+body {
+	background-image: url(../img/bg.jpg);
+	background-repeat: repeat;
+	background-color: #FFF;
+	text-align:justify;
+	text-justify: inter-ideograph;
+	/* font:13px "ＭＳ Ｐゴシック", arial, helvetica, clean, sans-serif; */
+	font-family: "メイリオ", Meiryo, Osaka, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	font-size:84%;
+	line-height: 1.6;
+	background-position: center top;
+}
+#wrapper {
+	width: 1068px;
+	margin-right: auto;
+	margin-left: auto;
+	background-image: url(../img/bg_wrap.gif);
+	background-repeat: repeat-y;
+	background-position: center top;
+}
+#wrapperInr {
+	background-image: url(../img/bg_wrapinr.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	overflow: hidden; /* 回り込み(float)の解除 + 内部要素の高さを自動補正 */
+	zoom: 1; /* for IE6 */
+}
+
+
+#nav {
+	width: 1002px;
+	margin: 0 auto;
+}
+#main {
+	width: 1002px;
+	margin: auto;
+	font-family: "メイリオ", Meiryo, Osaka, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+#main #page-wrap {
+	background-image: url(../img/bg_pag.gif);
+	background-repeat: repeat-y;
+	overflow: hidden; /* 回り込み(float)の解除 + 内部要素の高さを自動補正 */
+	zoom: 1; /* for IE6 */
+	padding-top: 9px;
+}
+#main #page-wrap #pageNav {
+	float: left;
+	width: 190px;
+	margin-left: 9px;
+	display: inline; /* for IE6 */
+}
+#main #page-wrap #pageMain {
+	float: right;
+	width: 766px;
+	margin-right: 4px;
+	display: inline; /* for IE6 */
+}
+
+
+
+/*---------------------------------------------------------------
+			ヘッダー
+--------------------------------------------------------------- */
+#header {
+	height: 115px;
+	position: relative;
+}
+#header h1 {
+	background-image: url(../img/header.jpg);
+	background-repeat: no-repeat;
+	text-indent: -999999px;
+}
+#header h1 a {
+	display: block;
+	height: 90px;
+	width: 780px;
+	outline:none;
+	margin-left: 35px;
+	margin-top: 15px;
+}
+
+
+.entranceBtn{
+  position: relative;
+  top: -13px;
+  left: 650px;
+  background-color:#BF6D09;
+  width: 150px;
+  padding:4px;
+  display:block;
+  text-align:center;
+  color:#FFF;
+}
+
+.entranceBtn a:link{
+	color:#FFF;
+	text-decoration:none;
+}
+
+.entranceBtn a:visited{
+	color:#FFF;
+}
+
+
+
+/*---------------------------------------------------------------
+			フッター
+--------------------------------------------------------------- */
+#footer {
+	clear: both;
+	background-image: url(../img/footer.gif);
+	background-repeat: no-repeat;
+	background-position: center top;
+	height: 101px;
+}
+#footer p {
+	display: none;
+}
+
+#pagetop {
+	text-align: right;
+}
+#pagetop img {
+	padding-right: 45px;
+}
+
+
+
+
+/*---------------------------------------------------------------
+			トップページ
+--------------------------------------------------------------- */
+#top-main {
+	height: 296px;
+	background-image: url(../img/top_main.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	margin-bottom: 11px;
+	position: relative;
+}
+
+#top-main a {
+	display: block;
+	width: 100%;
+}
+
+#top-main #keyvisual img {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 631px;
+	height: 296px;
+}
+#top-main #endaimousikomi {
+	position: absolute;
+	left: 875px;
+	top: 167px;
+	height: 126px;
+	width: 126px;
+}
+#top-main #endaimousikomi a {
+	height: 126px;
+	width: 126px;
+	text-indent: -999999px;
+	display: block;
+}
+
+#top-main p {
+	display: none;
+}
+
+
+/*---[[NEWS & TOPICS] [お問い合わせ]]---*/
+
+.areaLR {
+	overflow: hidden; /* 回り込み(float)の解除 + 内部要素の高さを自動補正 */
+	zoom: 1; /* for IE6 */
+}
+.areaLR .boxLR {
+	float: left;
+	display: inline;
+}
+
+/*---NEWS & TOPICS---*/
+
+#top-news {
+	width: 591px;
+	margin: 0 20px;
+}
+#top-news h2,
+#top-news dl,
+#top-news dl dt,
+#top-news dl dd {		/*余白リセット*/
+	margin:0;
+	padding:0;
+}
+
+#top-news dl {
+	height: 270px;
+	/* height: 170px; */
+	font-size: 90%;
+	overflow-x: auto;
+	overflow-y: scroll;
+	margin-top: 16px;
+	margin-bottom: 0px;
+	zoom: 1;
+	scrollbar-face-color: #0DA8E3;
+	scrollbar-track-color: #D5F4F5;
+	scrollbar-arrow-color: #FFFFFF;
+	scrollbar-highlight-color: #A7DFED;
+	scrollbar-shadow-color: #A7DFED;
+	scrollbar-3dlight-color: #A7DFED;
+	scrollbar-darkshadow-color: #A7DFED;
+}
+#top-news dl dt,
+#top-news dl dd {
+	float: left;
+	font-weight: normal;
+	margin-bottom: 10px;
+}
+#top-news dl dt {
+	width: 105px;
+	background-image: url(../img/icon_arrow_list.gif);
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding-left: 15px;
+}
+#top-news dl dd {
+	width: 430px;
+}
+
+/*---お問い合わせ---*/
+
+#top-toiawase {
+	width: 370px;
+	line-height: 140%;
+}
+#top-toiawase h3 {
+	margin: 17px 13px;
+}
+#top-toiawase p {
+	margin-left: 13px;
+	margin-bottom: 10px;
+}
+
+
+
+/*---------------------------------------------------------------
+			ページ共通 #pageMain
+--------------------------------------------------------------- */
+#pageMain #pageInr {
+	width: 654px;
+	min-height: 470px;
+	height: auto !important;
+	height: 470px;
+	margin: 34px auto;
+}
+
+
+#pageMain h3 {
+	font-size: 140%;
+	font-weight: bold;
+	color: #073E74;
+	letter-spacing: 1px;
+	background-image: url(../img/h3_bg.gif);
+	background-repeat: no-repeat;
+	height: 43px;
+	padding-left: 30px;
+	padding-top: 8px;
+	margin-bottom: 1em;
+	margin-top: 2em;
+	margin-right: -28px;
+	margin-left: -28px;
+	position: relative; /* for IE6 */
+}
+#pageMain h4 {
+	font-size: 120%;
+	font-weight: bold;
+	color: #333;
+	background-image: url(../img/h4_bg.gif);
+	background-repeat: no-repeat;
+	background-position: left center;
+	margin-top: 2em;
+	margin-bottom: 1em;
+	margin-right: -11px;
+	margin-left: -11px;
+	padding-left: 30px;
+	position: relative; /* for IE6 */
+	zoom: 1;
+	height: 35px;
+}
+#pageMain h5 {
+	font-weight: bold;
+	background-image: url(../img/icon_arrow_ppl.jpg);
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding-left: 20px;
+	font-size: 105%;
+	color: #66518C;
+	margin-top: 1em;
+	margin-bottom: 0.5em;
+}
+
+
+.doubleline{
+	text-decoration:line-through;
+}
+
+
+.list-ptn1 ol {
+	font-family: Verdana, Geneva, sans-serif;
+	font-weight: bold;
+	margin-left: 2em;
+}
+.list-ptn1 ol li {
+	list-style-type: decimal;
+	margin-left: 2em;
+	font-style: italic;
+}
+.list-ptn1 ol li span {
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	font-style: normal;
+	font-weight: normal;
+}
+
+#pageMain ol {
+	margin: 1em;
+}
+#pageMain ol li {
+	margin-left: 1em;
+	list-style-type: decimal;
+}
+
+
+dl {
+	margin: 1em;
+}
+dl dt {
+	font-weight: bold;
+}
+dl dd {
+	margin: 0 0 0 1em;
+}
+
+/* 準備中 */
+#junbi {
+	text-align: center;
+	padding-top: 120px;
+}
+#pageMain ul {
+	margin: 1em;
+}
+#pageMain ul li {
+	margin-left: 1em;
+	list-style-type: disc;
+}
+
+#pageMain ul.ulPdf li {
+	background-image: url(../img/icon_arrow_list.gif);
+	background-repeat: no-repeat;
+	background-position: left center;
+	list-style-type: none;
+	margin-left: 0px;
+	padding-left: 15px;
+}
+#pageMain ul.ulPdf li a {
+	background-image: url(../img/icon_pdf.gif);
+	background-repeat: no-repeat;
+	background-position: right center;
+	height: 25px;
+	display: inline-block;
+	padding-right: 25px;
+}
+
+.areaBtn {
+	margin: 1em;
+}
+.textArrow {
+	background-image: url(../img/icon_arrow_org.gif);
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding-left: 30px;
+}
+
+
+
+/* 取り消し線（線のみ赤） */
+del {
+	color: #F00;
+}
+del span {
+	color: #333;
+}
+
+
+
+/* tbl-ptn1
+--------------------------------------------------------------- */
+table.tbl-ptn1{
+	background-color:#CBCBCB;
+	border-collapse: separate;
+	border-spacing: 1px;
+	margin: 0.5em;
+	font-size:0.9em;
+}
+.tbl-ptn1 th{
+	background-color: #F0EFE3;
+	text-align: center;
+	font-size: 100%;
+	padding-top: 4px;
+	padding-right: 14px;
+	padding-bottom: 4px;
+	padding-left: 14px;
+	margin: 1px;
+	border-collapse: separate;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-left-style: solid;
+	border-top-color: #FBFAF7;
+	border-right-color: #FBFAF7;
+	border-bottom-color: #FBFAF7;
+	border-left-color: #FBFAF7;
+}
+.tbl-ptn1 td{
+	border: 1px solid #FFFFFF;
+	text-align: center;
+	font-size: 100%;
+	padding-top: 4px;
+	padding-right: 14px;
+	padding-bottom: 4px;
+	padding-left: 14px;
+	line-height: 140%;
+	margin: 1px;
+	border-collapse: separate;
+	background-color: #FFFFFF;
+}
+.tbl-ptn1 caption {
+	font-weight: bold;
+	color: #333333;
+}
+
+
+/*---------------------------------------------------------------
+			各ページ固有の指定
+--------------------------------------------------------------- */
+
+/* 開催概要ページ
+--------------------------------------------------------------- */
+#page-gaiyou dl {
+}
+#page-gaiyou dl dt,
+#page-gaiyou dl dd {
+	font-size: 106%;
+	padding:0;
+	margin-bottom: 1.5em;
+	float: left;
+	overflow: hidden; /* 回り込み(float)の解除 + 内部要素の高さを自動補正 */
+	zoom: 1; /* for IE6 */
+	margin-top: 0;
+	margin-right: 0;
+	margin-left: 0;
+}
+#page-gaiyou dl dt {
+	width: 80px;
+	background-image: url(../img/icon_arrow_ppl.jpg);
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding-left: 20px;
+}
+#page-gaiyou dl dd {
+	width: 450px;
+}
+#page-gaiyou dl dd .title {
+	padding-left: 6em;
+}
+
+#page-kaijou h4 {
+	font-weight: bold;
+	color: #944749;
+	background-color: #E7BCC2;
+	display: inline;
+	border: 1px solid #B96D6F;
+	margin-top: 0.8em;
+	line-height: 100%;
+	background-image: none;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	padding-top: 0;
+	padding-right: 7px;
+	padding-bottom: 0;
+	padding-left: 7px;
+	font-size: 100%;
+}
+#page-kaijou ul {
+	margin-top: 0.5em;
+	margin-right: 0.8em;
+	margin-bottom: 1.2em;
+	margin-left: 0.8em;
+}
+#page-kaijou dl dt {
+	font-size: 120%;
+	background-image: url(../img/icon_arrow_ppl.jpg);
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding-left: 18px;
+}
+#shiseki dt{
+	width:180px;
+	float:left;
+	font-weight:normal;
+	clear: both;
+}
+#shiseki dd{
+	width:550px;
+}
+
+
+/* 参加費ページ
+--------------------------------------------------------------- */
+#page-sankahi .tbl-ptn1 tr th,
+#page-sankahi .tbl-ptn1 tr td {
+	text-align: left;
+	padding: 4px 8px;
+}
+#page-sankahi .tbl-ptn1 tr th {
+	width: 155px;
+}
+
+
+/* 演題募集ページ
+--------------------------------------------------------------- */
+#page #page-endai ol li {
+	margin-bottom: 1em;
+}
+#page-endai .areaUmin {
+	text-align: center;
+	margin: 20px;
+	background-color: #F5F3F8;
+	padding: 15px;
+	border: 1px dotted #71528B;
+}
+#page-endai .areaUmin img {
+	margin: 5px;
+}
+#page-endai .endai-heibun span {
+	background-image: url(../img/icon_arrow_ppl.jpg);
+	background-repeat: no-repeat;
+	background-position: left center;
+	display: inline-block;
+	margin-left: 30px;
+	padding-left: 20px;
+	font-weight: bold;
+}
+#page-endai .areaChui {
+	margin: 20px;
+	padding: 15px;
+	background-color: #FFFCF0;
+	border: 2px solid #F90;
+}
+#page #page-endai .areaChui h5 {
+	margin: 0px;
+	color: #E17956;
+	font-size: 115%;
+	background-image: url(../img/icon_exc.jpg);
+}
+#page-endai .endai-kikan {
+	font-weight: bold;
+	margin: 1em;
+	color: #6C132C;
+	font-size: 106%;
+}
+#page #page-endai ul li {
+	list-style-type: none;
+	margin-left: 0 !important;
+}
+
+
+/* 学術集会情報＞次回の学術集会情報
+--------------------------------------------------------------- */
+#page-info-next dl.dlptn1 {
+	margin: 0;
+	overflow: hidden; /* 回り込み(float)の解除 + 内部要素の高さを自動補正 */
+	zoom: 1; /* for IE6 */
+}
+#page-info-next dl.dlptn1 dt,
+#page-info-next dl.dlptn1 dd {
+	float: left;
+	margin-bottom: 1em;
+}
+#page-info-next dl.dlptn1 dt {
+	width: 100px;
+	border: 2px solid #24ABE3;
+	padding: 0 5px;
+	text-align: center;
+	font-weight: bold;
+	color: #009EDB;
+}
+#page-info-next dl.dlptn1 dd {
+	width: 520px;
+	background-image: url(../img/line_dot_blu.gif);
+	background-repeat: repeat-x;
+	background-position: left bottom;
+	margin-left: 16px;
+	padding-bottom: 10px;
+}
+#page-info-next strong {
+	font-size: 106%;
+	font-weight: bold;
+	color: #005280;
+}
+#page-info-next .areaBtn img {
+	margin: 10px;
+}
+
+
+
+#pageMain ul.ulPpt li {
+	background-image: url(../img/icon_arrow_list.gif);
+	background-repeat: no-repeat;
+	background-position: left center;
+	list-style-type: none;
+	margin-left: 0px;
+	padding-left: 15px;
+}
+#pageMain ul.ulPpt li a {
+	background-image: url(../img/ppt.png);
+	background-repeat: no-repeat;
+	background-position: right center;
+	height: 25px;
+	display: inline-block;
+	padding-right: 25px;
+}
+
+
+.mailImg{
+	background:url(../img/mailaddress.gif);
+	background-repeat: no-repeat;
+	display: inline-block;
+	width:200px;
+	height:20px;
+	padding:0px 0 0 0;
+}
+
+
+.mailImg a{
+	background:url(../img/mailaddress.gif);
+	background-repeat: no-repeat;
+	display: inline-block;
+	width:200px;
+	height:20px;
+	padding:0px 0 0 0;
+}
+
+
+
+.indentRight{
+	text-align:right;
+}
+
+
+
+
+/* 学術集会情報＞過去の学術集会情報
+--------------------------------------------------------------- */
+#page-info-past {
+}
+#page-info-past dl {
+	margin: 0 1em;
+	overflow: hidden; /* 回り込み(float)の解除 + 内部要素の高さを自動補正 */
+	zoom: 1; /* for IE6 */
+}
+#page-info-past dl dt,
+#page-info-past dl dd {
+	float: left;
+	margin:0;
+	padding:0;
+}
+#page-info-past dl dt {
+	width: 100px;
+}
+#page-info-past dl dd {
+	width: 500px;
+}
+
+
+
+
+/* 理事長挨拶ページ
+--------------------------------------------------------------- */
+#page-greeting {
+	margin-right: 25px;
+}
+
+.page-greeting__inner {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.page-greeting__L {
+	width: 29%;
+	padding-top: 2%;
+}
+
+.page-greeting__L img {
+	max-width: 100%;
+}	
+
+.page-greeting__R {
+	width: 64%;
+	padding-right: 5%;
+}
+
+#page-greeting p {
+	text-indent: 1em;
+	line-height: 1.7;
+}
+#page-greeting .greeting-name {
+	text-align: right;
+	margin: 1em;
+}
+#page-greeting .greeting-name span {
+	font-size: 110%;
+	font-weight: bold;
+}
+#page-greeting .img-float img {
+	margin-right: 15px;
+	margin-bottom: 15px;
+}
